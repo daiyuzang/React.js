@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo-two</title>
+</head>
+<body>
+	<div id="example"></div>
+	<script type="text/javascript" src="build/react.js"></script>
+	<script type="text/javascript" src="build/react-dom.js"></script>
+	<script type="text/javascript" src="build/browser.min.js"></script>
+	<script type="text/babel">
+
+	/* JSX 的基本语法规则：遇到 HTML 标签（以 < 开头），就用 HTML 规则解析；遇到代码块（以 { 开头），就用 JavaScript 规则解析*/
+		var names = ['Alice','Tom','Jack'];
+		ReactDOM.render(
+		<div> 
+			{
+				names.map(function(name,index){
+					return <div key={index}>Hello {name}!</div>;
+				})
+			}
+		</div>,document.getElementById("example"));
+	</script>
+</body>
+</html>
